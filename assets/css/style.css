@@ -1,11 +1,11 @@
-/* | Universal selector styles | */
+/* |||| Universal selector styles |||| */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-/* || Element selector styles || */
+/* |||||||| Element selector styles |||||||| */
 body {
     background-color: #d9dcd6;
 }
@@ -33,10 +33,6 @@ header h1 {
     font-size: 48px;
 }
 
-header h1 .seo {
-    color: #d9dcd6;
-}
-
 header div {
     padding-top: 15px;
     margin-right: 20px;
@@ -54,7 +50,7 @@ header div ul li {
     margin-left: 25px;
 }
 
-/* ~~ Renamed unique "hero" selector to standard semantic <figure> element, this applies styles to the <figure> element and loads background image ~~ */
+/* ~~ Changed class selector .hero to standard semantic <figure> element, this applies styles to the <figure> element and loads background image ~~ */
 figure {
     height: 800px;
     width: 100%;
@@ -64,14 +60,35 @@ figure {
     background-position: center;
 }
 
-/* ~~ Changed class selector .content to a semantic element selector for sections ~~ */
-section {
+/* ~~ Changed class selector .content to a semantic element <main> ~~ */
+main {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
-/* ~~ Changed class selector .benefits to a semantic element selector for asides ~~ */
+/* ~~ Consolidated h2 styling within the <main> element rather than using three independent class selectors ~~ */
+main h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/* ~~ Consolidated formating for articles within the <main> element rather than using independent class selectors ~~ */
+main article {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+/* ~~ Consolidated img size within articles for the <main> element rather than using independent class selectors ~~ */
+main article img {
+    max-height: 200px;
+}
+
+/* ~~ Changed class selector .benefits to a semantic element selector for asides, consolidated text margin and coloring for the aside element ~~ */
 aside {
     margin-right: 20px;
     padding: 20px;
@@ -81,6 +98,27 @@ aside {
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+/* ~~ Consolidated h3 styling within the only <aside> element rather than using three independent class selectors ~~ */
+aside h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* ~~ Consolidated individual class styling within the only <aside> element as each article element within the aside needs the same margin and color ~~ */
+aside article {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+/* ~~ Consolidated img styling for articles within the only <aside> element as each image needs the same display type, margin, and max width ~~ */
+aside article img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
 }
 
 /* ~~ Changed class selector .footer to a element selector footer ~~ */
@@ -95,7 +133,8 @@ footer h2 {
     font-size: 20px;
 }
 
-/* ||| Class selector styles ||| */
+/* |||||||||||||||| Class selector styles |||||||||||||||| */
+/* I'm keeping these class selectors as they seem like a handy way to move a few images left/right where necessary in the html*/
 .float-left {
     float: left;
     margin-right: 25px;
@@ -104,106 +143,4 @@ footer h2 {
 .float-right {
     float: right;
     margin-left: 25px;
-}
-
-.benefit-lead {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
-    max-height: 200px;
-}
-
-.online-reputation-management img {
-    max-height: 200px;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
 }
